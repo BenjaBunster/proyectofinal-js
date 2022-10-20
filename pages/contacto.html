@@ -63,9 +63,9 @@
       </div>
     </div>
 
-    <div class="form-contacto">
+    <div class="formContacto">
       <section>
-        <form action="" id="form-contacto">
+        <form action="" id="formContacto">
           <h2>Contactanos</h2>
           <label for="nombre">NOMBRE</label>
           <input type="text" name="nombre" id="nombre-contacto" class="entrada-contacto" />
@@ -116,20 +116,21 @@
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!--Mi script-->
   <script src="../js/contacto.js"></script>
+  
   <script>
     let url = 'https://jsonplaceholder.typicode.com/users/';
       fetch(url)
           .then( response => response.json() )
-          .then( form-contacto => mostrarContacto(form-contacto) )
+          .then( formContacto => mostrarContacto(formContacto) )
           .catch( error => console.log(error) )
 
-      const mostrarData = (form-contacto) => {
-          console.log(form-contacto)
+      const mostrarData = (formContacto) => {
+          console.log(formContacto)
           let body = ""
           for (var i = 0; i < data.length; i++) {      
-             body+=`<tr><td>${form-contacto[i].NOMBRE}</td><td>${data[i].EMAIL}</td><td>${data[i].TELEFONO}</td></tr>`
+             body+=`<tr><td>${formContacto[i].NOMBRE}</td><td>${data[i].EMAIL}</td><td>${data[i].TELEFONO}</td></tr>`
           }
-          document.getElementById('form-contacto').innerHTML = body
+          document.getElementById('formContacto').innerHTML = body
       }
   </script>
 </body>
