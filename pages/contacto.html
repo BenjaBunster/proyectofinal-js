@@ -116,6 +116,22 @@
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!--Mi script-->
   <script src="../js/contacto.js"></script>
+  <script>
+    let url = 'https://jsonplaceholder.typicode.com/users/';
+      fetch(url)
+          .then( response => response.json() )
+          .then( form-contacto => mostrarContacto(form-contacto) )
+          .catch( error => console.log(error) )
+
+      const mostrarData = (form-contacto) => {
+          console.log(form-contacto)
+          let body = ""
+          for (var i = 0; i < data.length; i++) {      
+             body+=`<tr><td>${form-contacto[i].NOMBRE}</td><td>${data[i].EMAIL}</td><td>${data[i].TELEFONO}</td></tr>`
+          }
+          document.getElementById('form-contacto').innerHTML = body
+      }
+  </script>
 </body>
 
 </html>
